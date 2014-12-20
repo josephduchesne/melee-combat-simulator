@@ -21,7 +21,7 @@
       <tbody>
         <tr ng-repeat="prop in attributes">
           <td>{{prop.title}}</td>
-          <td><input type='text' ng-model="character[prop.id]" ng-pattern="prop.format" required></td>
+          <td><input type='{{prop.type}}' ng-model="character[prop.id]" ng-pattern="prop.format" required></td>
         </tr>
       </tbody>
       <tbody>

@@ -5,18 +5,18 @@ var MartialSim = angular.module( 'MartialSim', ['ngSanitize']);
 MartialSim.controller('MartialSimEditor', ['$scope','$location', function($scope,$location) {
   
   $scope.attributes = [
-    { id: 'name', title: "Name", format: "\\w[\\w ]+", save_offset:0 },
-    { id: 'hp', title: "HP", format: "\\d+", save_offset:1 },
-    { id: 'str', title: "Str", format: "\\d{1,2}", save_offset:2 },
-    { id: 'dex', title: "Dex", format: "\\d{1,2}", save_offset:3},
-    { id: 'con', title: "Con", format: "\\d{1,2}", save_offset:4 },
-    { id: 'bab', title: "BAB", format: "\\d{1,2}(/\\d{1,2})*", save_offset:5 },
-    { id: 'chit', title: "+hit", format: "\\d{1,2}", save_offset:6 },
-    { id: 'threat', title: "Threat", format: "(\\d{1,2}-){0,1}20x\\d", save_offset:7 },
-    { id: 'dmgd', title: "Dmg dice", format: "\\d{1,2}d\\d{1,2}", save_offset:8 },
-    { id: 'dmgv', title: "Dmg Val", format: "\\d{1,2}", save_offset:9 },
-    { id: 'ac', title: "AC", format: "\\d{1,2}", save_offset:10 },
-    { id: 'init', title: "Init", format: "-?\\d{1,2}", save_offset:11 },
+    { id: 'name', title: "Name", format: "\\w[\\w ]+", save_offset:0, type: 'text' },
+    { id: 'hp', title: "HP", format: "\\d+", save_offset:1, type: 'number' },
+    { id: 'str', title: "Str", format: "\\d{1,2}", save_offset:2, type: 'number' },
+    { id: 'dex', title: "Dex", format: "\\d{1,2}", save_offset:3, type: 'number'},
+    { id: 'con', title: "Con", format: "\\d{1,2}", save_offset:4, type: 'number' },
+    { id: 'bab', title: "BAB", format: "\\d{1,2}(/\\d{1,2})*", save_offset:5, type: 'text'  },
+    { id: 'chit', title: "+hit", format: "\\d{1,2}", save_offset:6, type: 'number' },
+    { id: 'threat', title: "Threat", format: "(\\d{1,2}-){0,1}20x\\d", save_offset:7, type: 'number' },
+    { id: 'dmgd', title: "Dmg dice", format: "\\d{1,2}d\\d{1,2}", save_offset:8, type: 'text'  },
+    { id: 'dmgv', title: "Dmg Val", format: "\\d{1,2}", save_offset:9, type: 'number' },
+    { id: 'ac', title: "AC", format: "\\d{1,2}", save_offset:10, type: 'number' },
+    { id: 'init', title: "Init", format: "-?\\d{1,2}", save_offset:11, type: 'number' },
   ];
   
   $scope.derrived_attributes = [
