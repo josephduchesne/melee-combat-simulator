@@ -60,9 +60,9 @@ MartialSim.controller('MartialSimEditor', ['$scope','$location', function($scope
   
   $scope.fightCount = 1;
   
-  
+  $scope.combatLog = "";
   $scope.log = function(){
-    document.getElementById('combatLog').innerHTML += Array.prototype.slice.call(arguments).join(' ')+"<br>";
+    $scope.combatLog += Array.prototype.slice.call(arguments).join(' ')+"<br>";
   }
   
   $scope.save = function(){
@@ -132,6 +132,8 @@ MartialSim.controller('MartialSimEditor', ['$scope','$location', function($scope
   
   $scope.fights = 0;
   $scope.stats = [];
+  
+
   
   $scope.attack = function(c,e,max_attacks,allow_fumbles) {
 
