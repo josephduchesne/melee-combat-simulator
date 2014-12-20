@@ -252,6 +252,7 @@ MartialSim.controller('MartialSimEditor', ['$scope','$location', function($scope
   }; //end fight
  
   $scope.fightNTimes = function(){
+	$scope.combatLog = "";
     console.time("fight "+$scope.fightCount+" times");
     for(var i=0;i<$scope.fightCount;i++){
 	  if(i>=10) $scope.disableLog = true;
