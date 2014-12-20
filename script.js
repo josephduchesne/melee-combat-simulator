@@ -12,7 +12,7 @@ MartialSim.controller('MartialSimEditor', ['$scope','$location', function($scope
     { id: 'con', title: "Con", format: "\\d{1,2}", save_offset:4, type: 'number' },
     { id: 'bab', title: "BAB", format: "\\d{1,2}(/\\d{1,2})*", save_offset:5, type: 'text'  },
     { id: 'chit', title: "+hit", format: "\\d{1,2}", save_offset:6, type: 'number' },
-    { id: 'threat', title: "Threat", format: "(\\d{1,2}-){0,1}20x\\d", save_offset:7, type: 'number' },
+    { id: 'threat', title: "Threat", format: "(\\d{1,2}-){0,1}20x\\d", save_offset:7, type: 'text' },
     { id: 'dmgd', title: "Dmg dice", format: "\\d{1,2}d\\d{1,2}", save_offset:8, type: 'text'  },
     { id: 'dmgv', title: "Dmg Val", format: "\\d{1,2}", save_offset:9, type: 'number' },
     { id: 'ac', title: "AC", format: "\\d{1,2}", save_offset:10, type: 'number' },
