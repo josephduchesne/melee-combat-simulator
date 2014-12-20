@@ -165,6 +165,12 @@ MartialSim.controller('MartialSimEditor', ['$scope','$location', function($scope
         }
         return; //end attacks, we fumbled
       } //end fumble
+	  
+	  //miss!
+	  if( hit<defending_ac && roll != 20){
+		$scope.log(c.name,"misses",e.name,"!");
+		continue;
+	  }
       
       //threat
       var multiplier = 1;
