@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html id="ng-app" ng-app="MartialSim">
+
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-controller="MartialSimEditor">
+{{foo}}
+  <div style='float:left; border: 1px solid black; margin:5px;' ng-repeat="character in characters">
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="prop in attributes">
+          <td>{{prop.title}}</td>
+          <td><input type='text' ng-model="character[prop.id]" ng-pattern="prop.format" required></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr ng-repeat="prop in derrived_attributes">
+          <td>{{prop.title}}</td>
+          <td>{{character[prop.id]}}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+  <div id='combatLog' style='float:left; border: 1px solid black; margin:5px; width: 400px; height: 470px; overflow-y: scroll;'>
+    
+  </div>
+  
+  <div style="clear:both;"></div>
+  <button ng-click="fightNTimes()">Fight!</button> <input ng-model="fightCount" type='number' min='1' max='10000'> times<br>
+  Total Fights: {{fights}}<br>
+  Stats: 
+  <div ng-repeat="character in characters">
+  {{character.name}} wins {{character.$wins}}/{{fights}} fights: {{ (100*character.$wins/fights) | number }}% win rate<br>
+  </div>
+  <button ng-click="reset()">Reset Stats</button><br>
+  <br>
+  <button ng-click="save()">Export</button><button ng-click="load()">Import</button><br>
+  <textarea ng-model="saveString" style='width: 500px; height: 40px;'>
+  
+  </textarea>
+</body>
+</html>

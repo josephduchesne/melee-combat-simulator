@@ -1,0 +1,1 @@
+Simulates two DND 3.5 party members using melee attacks on eachother until one keels over.
