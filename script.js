@@ -1,6 +1,6 @@
 // Code goes here
 
-var MartialSim = angular.module( 'MartialSim', []);
+var MartialSim = angular.module( 'MartialSim', ['ngSanitize']);
 
 MartialSim.controller('MartialSimEditor', ['$scope','$location', function($scope,$location) {
   
