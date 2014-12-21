@@ -177,7 +177,7 @@ MartialSim.controller('MartialSimEditor', ['$scope','$location', function($scope
       if(roll >= c.$threat_range[0] && roll <= c.$threat_range[1]){
         var confirm_roll = $scope.randomInt(1,20);
         var confirm_hit = confirm_roll + c.$attacks[i];
-        $scope.log(c.name," rolls threat! Roll to confirm:",roll,": ",hit," vrs ",defending_ac+" AC");
+        $scope.log(c.name," rolls threat! Roll to confirm:",confirm_roll,": ",confirm_hit," vrs ",defending_ac+" AC");
         if(confirm_hit >= defending_ac) multiplier = c.$threat_range[2];
       }
       
